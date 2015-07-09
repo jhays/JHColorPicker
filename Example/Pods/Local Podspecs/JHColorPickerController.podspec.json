@@ -1,0 +1,27 @@
+{
+  "name": "JHColorPickerController",
+  "version": "0.1.0",
+  "summary": "Color picker with several swatch libraries and custom color picker",
+  "description": "                       JHColorPickerController is a color picker that includes swatches from Crayola, Pantone, and ChameleonFramework flat colors, as well as custom color picker\n",
+  "homepage": "https://github.com/jhays/JHColorPickerController",
+  "license": "MIT",
+  "authors": {
+    "JHays": "julian@devmode.com"
+  },
+  "source": {
+    "git": "https://github.com/jhays/JHColorPickerController.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "JHColorPickerController": [
+      "Pod/Assets/gradient.png",
+      "Pod/Assets/JHColorPickerController.xib"
+    ]
+  },
+  "frameworks": "UIKit"
+}

@@ -7,12 +7,29 @@
 //
 
 import UIKit
+import JHColorPickerController
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView:UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+
+       
+       var myBundle =  NSBundle(forClass: JHColorPickerController.self)
+        var assetPath = myBundle.pathForResource("JHColorPickerController.bundle/gradient", ofType:"png")
+        //imageView.image = UIImage(contentsOfFile: assetPath!)
+
+        if let controller =  NSBundle(forClass: JHColorPickerController.self).loadNibNamed("JHColorPickerController.bundle/JHColorPickerController", owner:self, options:nil)[0] as? JHColorPickerController {
+            self.presentViewController(controller, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {

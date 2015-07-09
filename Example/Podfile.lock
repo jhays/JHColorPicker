@@ -1,0 +1,14 @@
+PODS:
+  - JHColorPickerController (0.1.0)
+
+DEPENDENCIES:
+  - JHColorPickerController (from `../`)
+
+EXTERNAL SOURCES:
+  JHColorPickerController:
+    :path: ../
+
+SPEC CHECKSUMS:
+  JHColorPickerController: 530658f44c0268d67ebcbc05cc7134be23a0a9d2
+
+COCOAPODS: 0.37.2
