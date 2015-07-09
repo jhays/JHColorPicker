@@ -27,9 +27,9 @@ class ViewController: UIViewController {
         var assetPath = myBundle.pathForResource("JHColorPickerController.bundle/gradient", ofType:"png")
         //imageView.image = UIImage(contentsOfFile: assetPath!)
 
-        if let controller =  NSBundle(forClass: JHColorPickerController.self).loadNibNamed("JHColorPickerController.bundle/JHColorPickerController", owner:self, options:nil)[0] as? JHColorPickerController {
-            self.presentViewController(controller, animated: true, completion: nil)
-        }
+        let controller = JHColorPickerController()
+        self.presentViewController(controller, animated: true, completion: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
