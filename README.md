@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/JHColorPickerController.svg?style=flat)](http://cocoapods.org/pods/JHColorPickerController)
 [![Platform](https://img.shields.io/cocoapods/p/JHColorPickerController.svg?style=flat)](http://cocoapods.org/pods/JHColorPickerController)
 
+JHColorPickerController is a color picker that includes swatches from Crayola, Pantone, and ChameleonFramework flat colors, as well as a custom color picker
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

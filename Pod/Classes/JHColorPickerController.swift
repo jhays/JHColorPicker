@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import ChameleonFramework
 
 public class JHColorPickerController: UIViewController {
 
@@ -19,7 +20,13 @@ public class JHColorPickerController: UIViewController {
 //    }
     
     public override func viewDidLoad() {
-        //self.view.backgroundColor = UIColor.redColor()
+        
+        
     }
     
+    public override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.view.backgroundColor = UIColor.flatRedColor()
+    }
+
 }
