@@ -9,9 +9,7 @@
 import UIKit
 import JHColorPickerController
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var imageView:UIImageView!
+class ViewController: UIViewController, JHColorPickerControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +19,6 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-
-       
-       var myBundle =  NSBundle(forClass: JHColorPickerController.self)
-        var assetPath = myBundle.pathForResource("JHColorPickerController.bundle/gradient", ofType:"png")
-        //imageView.image = UIImage(contentsOfFile: assetPath!)
-
-        let controller = JHColorPickerController()
-        self.presentViewController(controller, animated: true, completion: nil)
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,5 +26,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBAction func changeColorBtnPressed(sender: AnyObject) {
+        let colorPickerController = JHColorPickerController()
+        colorPickerController.delegate = self
+        self.presentViewController(UINavigationController(rootViewController: colorPickerController), animated: true, completion: nil)
+    }
+ 
+    
+    func colorSelected(color:UIColor, name:String?) {
+        self.view.backgroundColor = color
+    }
 }
 

@@ -16,21 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aql-dn-eju">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sf-jr-XTm">
+                                <rect key="frame" x="253" y="285" width="95" height="30"/>
+                                <state key="normal" title="Change Color">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeColorBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Eb1-CX-pNu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Aql-dn-eju" secondAttribute="trailing" id="Dp7-tQ-Hjx"/>
-                            <constraint firstItem="Aql-dn-eju" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="L7b-oX-am3"/>
-                            <constraint firstItem="Aql-dn-eju" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="RN1-PN-s4H"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Aql-dn-eju" secondAttribute="bottom" id="u4B-no-9nE"/>
+                            <constraint firstAttribute="centerY" secondItem="5sf-jr-XTm" secondAttribute="centerY" id="2KR-0V-qma"/>
+                            <constraint firstAttribute="centerX" secondItem="5sf-jr-XTm" secondAttribute="centerX" constant="-0.5" id="6DK-pF-DKZ"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="imageView" destination="Aql-dn-eju" id="zaK-We-Qw6"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

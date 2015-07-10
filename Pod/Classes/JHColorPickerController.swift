@@ -12,7 +12,7 @@ import ChameleonFramework
 import UIColor_Crayola
 import UIColor_Pantone
 
-protocol JHPickerControllerDelegate {
+public protocol JHColorPickerControllerDelegate {
     func colorSelected(color:UIColor, name:String?)
 }
 
@@ -54,7 +54,7 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
     @IBOutlet weak var swatchCollectionView:UICollectionView!
     @IBOutlet weak var customView:UIView!
     
-    var delegate:JHPickerControllerDelegate?
+    public var delegate:JHColorPickerControllerDelegate?
     var colorSwatches = Array<Dictionary<String,AnyObject>>()
     
     
@@ -85,7 +85,8 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
             selectedColorView.backgroundColor = selectedColor
         }
     }
-    var selectedColorName: String?
+    var selectedColorName: String? 
+
     var previousColor: UIColor? {
         didSet{
             previousColorView.backgroundColor = previousColor
@@ -124,6 +125,7 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
     func saveBtnPressed(sender:UIButton) {
         if let color = selectedColor {
             delegate?.colorSelected(color, name: selectedColorName)
+            self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
         }else {
             
         }
@@ -145,6 +147,13 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
         }
     }
 
+    
+    //MARK: UICollectionViewDelegate
+    
+    public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        selectedColor = colorSwatches[indexPath.item]["color"] as? UIColor
+        selectedColorName = colorSwatches[indexPath.item]["title"] as? String
+    }
     
     // MARK: UICollectionViewDataSource
     
