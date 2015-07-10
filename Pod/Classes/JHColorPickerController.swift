@@ -56,7 +56,7 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
     
     public var delegate:JHColorPickerControllerDelegate?
     var colorSwatches = Array<Dictionary<String,AnyObject>>()
-    
+    var infColorPicker : InfColorPickerController!
     
     var selectedColorCategory:ColorCategory = .Crayola {
         didSet {
@@ -76,6 +76,7 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
             case .Custom:
                 swatchView.hidden = true
                 customView.hidden = false
+                infColorPicker.view.hidden = false
             }
             swatchCollectionView.reloadData()
         }
@@ -101,6 +102,12 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
         loadNavButtons()
         
         colorSwatches = ColorLibraries.crayolaColors
+        
+        infColorPicker = InfColorPickerController.colorPickerViewController()
+        infColorPicker.willMoveToParentViewController(self)
+        infColorPicker.view.hidden = true
+        customView.addSubview(infColorPicker.view)
+        infColorPicker.didMoveToParentViewController(self)
     }
     
     public override func viewWillAppear(animated: Bool) {
@@ -109,6 +116,11 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
         if let previousColor = previousColor {
             previousColorView.backgroundColor = previousColor
         }
+    }
+    
+    public override func viewDidAppear(animated:Bool) {
+        super.viewDidAppear(animated)
+        infColorPicker.view.frame = customView.bounds
     }
     
     func loadNavButtons() {

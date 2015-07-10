@@ -74,7 +74,7 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 
 + (InfColorPickerController*) colorPickerViewController
 {
-	return [[self alloc] initWithNibName: @"InfColorPickerView" bundle: nil];
+	return [[self alloc] initWithNibName: @"InfColorPickerView" bundle: [NSBundle bundleForClass:InfColorPickerController.class]];
 }
 
 //------------------------------------------------------------------------------
