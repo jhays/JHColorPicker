@@ -108,6 +108,10 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
         infColorPicker.view.hidden = true
         customView.addSubview(infColorPicker.view)
         infColorPicker.didMoveToParentViewController(self)
+        
+        //this is unfortunate, but any attempts to implement InfColorPickerDelegate have resulted in failure to compile. 
+        //must be something to do with communicating between ObjC and Swift... this notification will have to do for now.
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "colorPickerDidChangeColor:", name: "CUSTOM_COLOR_DID_CHANGE", object: nil)
     }
     
     public override func viewWillAppear(animated: Bool) {
@@ -158,7 +162,14 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
             selectedColorCategory = .Custom
         }
     }
-
+    
+    func colorPickerDidChangeColor(notification:NSNotification) {
+        if let userInfo = notification.userInfo {
+            if let resultColor = userInfo["resultColor"] as? UIColor {
+                selectedColor = resultColor
+            }
+        }
+    }
     
     //MARK: UICollectionViewDelegate
     

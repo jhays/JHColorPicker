@@ -205,8 +205,10 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 
 - (void) informDelegateDidChangeColor
 {
-	if (self.delegate && [(id) self.delegate respondsToSelector: @selector(colorPickerControllerDidChangeColor:)])
+    if (self.delegate && [(id) self.delegate respondsToSelector: @selector(colorPickerControllerDidChangeColor:)]) {
 		[self.delegate colorPickerControllerDidChangeColor: self];
+    }
+     [[NSNotificationCenter defaultCenter] postNotificationName:@"CUSTOM_COLOR_DID_CHANGE" object:nil userInfo:@{@"resultColor" : self.resultColor}];
 }
 
 //------------------------------------------------------------------------------
