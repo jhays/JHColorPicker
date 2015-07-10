@@ -16,6 +16,7 @@
 		1EA8E7D77167DC818CD3EBA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B2219CBFDF74D564A2096E /* CoreGraphics.framework */; };
 		20517A8172DAF08EA3C806B7 /* InfColorPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DADFDDE5C3EE705AC1295D03 /* InfColorPickerController.m */; };
 		210F023D9170EC7AAE0EA833 /* ChameleonMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = E30E286820E7BD8A29BD1D0C /* ChameleonMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2274561A1B5060BD00C9B4A3 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227456191B5060BD00C9B4A3 /* UIColorExtension.swift */; };
 		24D1639F034D97F27D0681BB /* InfHSBSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = A348F19CF5D2E93BBF1655DA /* InfHSBSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25D227B21B8D3B2808FCEAFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89FD52FB9259DF0F2D650DE /* UIKit.framework */; };
 		282F6F54C4E6E30ADCE9EAB9 /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD859E6710F3199B1E045A3 /* UIColor+Chameleon.m */; };
@@ -259,6 +260,7 @@
 		1E095CBF4A953876705B15FA /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9F411C544D47094512B479 /* Pods-JHColorPickerController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JHColorPickerController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		219951D08926E2772B9293F6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-JHColorPickerController_Tests-JHColorPickerController/Info.plist"; sourceTree = "<group>"; };
+		227456191B5060BD00C9B4A3 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		26D698A7F680B3E372E87167 /* Pods-JHColorPickerController_Tests-ChameleonFramework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-JHColorPickerController_Tests-ChameleonFramework-umbrella.h"; path = "../Pods-JHColorPickerController_Tests-ChameleonFramework/Pods-JHColorPickerController_Tests-ChameleonFramework-umbrella.h"; sourceTree = "<group>"; };
 		3880BAE598D8C19768F5EC64 /* Pods-JHColorPickerController_Tests-UIColor-Pantone-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHColorPickerController_Tests-UIColor-Pantone-Private.xcconfig"; path = "../Pods-JHColorPickerController_Tests-UIColor-Pantone/Pods-JHColorPickerController_Tests-UIColor-Pantone-Private.xcconfig"; sourceTree = "<group>"; };
 		3E34AF98F5A1539C4DAF7C1B /* Pods-JHColorPickerController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JHColorPickerController_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -675,6 +677,7 @@
 			isa = PBXGroup;
 			children = (
 				FBAD9D80387C21B1E7D24A2B /* JHColorPickerController.swift */,
+				227456191B5060BD00C9B4A3 /* UIColorExtension.swift */,
 				54659EE46890D2F4DBEBFE79 /* ColorLibraries.swift */,
 				4778AC6E03C73637C604A135 /* InfColorBarPicker.h */,
 				910A5C3040970C458470BF86 /* InfColorBarPicker.m */,
@@ -1268,6 +1271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D6E47229EA4DE6C7B6C15CF /* Pods-JHColorPickerController_Example-dummy.m in Sources */,
+				2274561A1B5060BD00C9B4A3 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1840,6 +1844,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5A29DC8519803C355ED9E53B /* Pods-JHColorPickerController_Example.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1925,6 +1930,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3E34AF98F5A1539C4DAF7C1B /* Pods-JHColorPickerController_Example.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
