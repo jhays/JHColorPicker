@@ -72,7 +72,7 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
             case .Flat:
                 customView.hidden = true
                 swatchView.hidden = false
-                //colorSwatches = ColorLibraries.flatColors
+                colorSwatches = ColorLibraries.flatColors
             case .Custom:
                 swatchView.hidden = true
                 customView.hidden = false
