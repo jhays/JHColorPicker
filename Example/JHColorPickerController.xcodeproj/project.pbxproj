@@ -41,6 +41,7 @@
 		607FACE51AFB9204008FA782 /* JHColorPickerController_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JHColorPickerController_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		609D6BC81B4F7C8A000CB0BF /* JHColorPickerController-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JHColorPickerController-Bridging-Header.h"; sourceTree = "<group>"; };
 		6F554356E860386C3769F0A2 /* JHColorPickerController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JHColorPickerController.podspec; path = ../JHColorPickerController.podspec; sourceTree = "<group>"; };
 		B3DCCC2838B34C7CC082B207 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C827254F155C0F53CDF09E96 /* Pods-JHColorPickerController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHColorPickerController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JHColorPickerController_Tests/Pods-JHColorPickerController_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +96,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				609D6BC81B4F7C8A000CB0BF /* JHColorPickerController-Bridging-Header.h */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -492,6 +494,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JHColorPickerController/JHColorPickerController-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -505,6 +508,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JHColorPickerController/JHColorPickerController-Bridging-Header.h";
 			};
 			name = Release;
 		};

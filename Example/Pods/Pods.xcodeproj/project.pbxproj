@@ -53,6 +53,8 @@
 		59629C17E939DEC9E417CF4E /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A8C4FBE828DA3B96FAF54A /* UIViewController+Chameleon.m */; };
 		5A7C7A59D9A75894E08A6B54 /* InfSourceColorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 658297D629A6F44AA65A087D /* InfSourceColorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B47AAD9735D75BA9001A3DC /* InfColorIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 580EAE370DF414C10BF0CF40 /* InfColorIndicatorView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		609D6BC31B4F7AC6000CB0BF /* Crayola.h in Headers */ = {isa = PBXBuildFile; fileRef = 609D6BC21B4F7AA8000CB0BF /* Crayola.h */; };
+		609D6BC41B4F7AC8000CB0BF /* Crayola.h in Headers */ = {isa = PBXBuildFile; fileRef = 609D6BC21B4F7AA8000CB0BF /* Crayola.h */; };
 		63558890FC3A605E6E18BE53 /* UIColor_Pantone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487E8913CF02E1A39470EDAC /* UIColor_Pantone.framework */; };
 		6528574954DD82BF628CE3DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062B5539C3853E15D7A0DB0E /* CoreGraphics.framework */; };
 		67C7AEBB32332A95A5407830 /* UIColor+Crayola.m in Sources */ = {isa = PBXBuildFile; fileRef = 8236E4B90691E45DFF7EE9BE /* UIColor+Crayola.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -333,6 +335,7 @@
 		5D6BA2F821AAEDD4E185D95C /* JHColorPickerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JHColorPickerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D6CC360D2BF16552A77ABDF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-JHColorPickerController_Tests-InfColorPicker/Info.plist"; sourceTree = "<group>"; };
 		6095FE349B246572C130C14A /* Pods-JHColorPickerController_Example-UIColor-Pantone.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-JHColorPickerController_Example-UIColor-Pantone.modulemap"; sourceTree = "<group>"; };
+		609D6BC21B4F7AA8000CB0BF /* Crayola.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Crayola.h; path = Source/Crayola.h; sourceTree = "<group>"; };
 		6110D187F7CCCAC82B9EA45C /* Pods-JHColorPickerController_Tests-InfColorPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHColorPickerController_Tests-InfColorPicker.xcconfig"; path = "../Pods-JHColorPickerController_Tests-InfColorPicker/Pods-JHColorPickerController_Tests-InfColorPicker.xcconfig"; sourceTree = "<group>"; };
 		6177172925296603B34652B9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		658297D629A6F44AA65A087D /* InfSourceColorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InfSourceColorView.h; path = InfColorPicker/InfSourceColorView.h; sourceTree = "<group>"; };
@@ -684,6 +687,7 @@
 			isa = PBXGroup;
 			children = (
 				7D2ED5C0FCF0C628E100920C /* UIColor+Crayola.h */,
+				609D6BC21B4F7AA8000CB0BF /* Crayola.h */,
 				8236E4B90691E45DFF7EE9BE /* UIColor+Crayola.m */,
 				0112990B52CE8B969926991C /* Support Files */,
 			);
@@ -972,6 +976,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D01BDB8654B4F6E05D7FE76 /* Pods-JHColorPickerController_Example-UIColor-Crayola-umbrella.h in Headers */,
+				609D6BC31B4F7AC6000CB0BF /* Crayola.h in Headers */,
 				BF247339D3D6152741580CA4 /* UIColor+Crayola.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -989,6 +994,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FBA3B7C4ACEA10B08A73D12 /* Pods-JHColorPickerController_Tests-UIColor-Crayola-umbrella.h in Headers */,
+				609D6BC41B4F7AC8000CB0BF /* Crayola.h in Headers */,
 				E59418B50CF136465095F3EB /* UIColor+Crayola.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
