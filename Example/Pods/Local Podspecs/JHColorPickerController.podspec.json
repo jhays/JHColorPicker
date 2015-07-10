@@ -25,9 +25,6 @@
   },
   "frameworks": "UIKit",
   "dependencies": {
-    "InfColorPicker": [
-
-    ],
     "ChameleonFramework": [
 
     ],

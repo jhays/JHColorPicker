@@ -1,8 +1,8 @@
 FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_FRAMEWORK_BUILD_PATH"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_FRAMEWORK_BUILD_PATH/ChameleonFramework.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/InfColorPicker.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/JHColorPickerController.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/UIColor_Crayola.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/UIColor_Pantone.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -ObjC -framework "ChameleonFramework" -framework "InfColorPicker" -framework "JHColorPickerController" -framework "UIColor_Crayola" -framework "UIColor_Pantone"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_FRAMEWORK_BUILD_PATH/ChameleonFramework.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/JHColorPickerController.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/UIColor_Crayola.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/UIColor_Pantone.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "ChameleonFramework" -framework "JHColorPickerController" -framework "UIColor_Crayola" -framework "UIColor_Pantone"
 OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-JHColorPickerController_Tests
