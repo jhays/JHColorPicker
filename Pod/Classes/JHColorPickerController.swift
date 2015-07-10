@@ -87,12 +87,8 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
     }
     var selectedColorName: String? 
 
-    var previousColor: UIColor? {
-        didSet{
-            previousColorView.backgroundColor = previousColor
-        }
-    }
-    var previousColorName:String?
+    public var previousColor: UIColor?
+    public var previousColorName:String?
     
     convenience init() {
         let bundle = NSBundle(forClass:JHColorPickerController.self)
@@ -107,8 +103,12 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
         colorSwatches = ColorLibraries.crayolaColors
     }
     
-    public override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    public override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let previousColor = previousColor {
+            previousColorView.backgroundColor = previousColor
+        }
     }
     
     func loadNavButtons() {

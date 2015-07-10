@@ -30,6 +30,7 @@ class ViewController: UIViewController, JHColorPickerControllerDelegate {
     @IBAction func changeColorBtnPressed(sender: AnyObject) {
         let colorPickerController = JHColorPickerController()
         colorPickerController.delegate = self
+        colorPickerController.previousColor = self.view.backgroundColor
         self.presentViewController(UINavigationController(rootViewController: colorPickerController), animated: true, completion: nil)
     }
  
