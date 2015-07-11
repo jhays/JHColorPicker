@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
                        JHColorPickerController is a color picker that includes swatches from Crayola, Pantone, and ChameleonFramework flat colors, as well as custom color picker
                        DESC
   s.homepage         = "https://github.com/jhays/JHColorPickerController"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.screenshots      = "http://i.imgur.com/egH6Thw.gif"
   s.license          = 'MIT'
   s.author           = { "JHays" => "julian@devmode.com" }
   s.source           = { :git => "https://github.com/jhays/JHColorPickerController.git", :tag => s.version.to_s }
