@@ -49,12 +49,14 @@ code_sign() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'ChameleonFramework.framework'
+  install_framework 'ColorUtils.framework'
   install_framework 'JHColorPickerController.framework'
   install_framework 'UIColor_Crayola.framework'
   install_framework 'UIColor_Pantone.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'ChameleonFramework.framework'
+  install_framework 'ColorUtils.framework'
   install_framework 'JHColorPickerController.framework'
   install_framework 'UIColor_Crayola.framework'
   install_framework 'UIColor_Pantone.framework'

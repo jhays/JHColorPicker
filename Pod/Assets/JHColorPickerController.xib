@@ -69,7 +69,7 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHl-aH-CqR">
                     <rect key="frame" x="16" y="96" width="276" height="64"/>
-                    <color key="backgroundColor" red="0.12941176469999999" green="0.47058823529999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="dcE-WG-dLv"/>
                     </constraints>
@@ -84,7 +84,7 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfA-Pl-cwW">
                     <rect key="frame" x="308" y="96" width="276" height="64"/>
-                    <color key="backgroundColor" red="0.12941176469999999" green="0.47058823529999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="eNM-09-sxi"/>
                     </constraints>

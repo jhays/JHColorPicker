@@ -11,31 +11,36 @@ import Foundation
 import UIColor_Crayola
 import UIColor_Pantone
 import ChameleonFramework
+import ColorUtils
 
 class ColorLibraries : NSObject {
     
     class func nameForColor(color:UIColor) -> String{
         var name:String?
         for dict in ColorLibraries.crayolaColors {
-            if color == (dict["color"] as! UIColor) {
+            if color.isEquivalentToColor(dict["color"] as! UIColor) {
+                println("crayola name match")
                 name = dict["title"] as? String
             }
         }
         if name == nil {
             for dict in ColorLibraries.pantoneColors {
-                if color == (dict["color"] as! UIColor) {
+                if color.isEquivalentToColor(dict["color"] as! UIColor) {
+                    println("pantone name match")
                     name = dict["title"] as? String
                 }
             }
         }
         if name == nil {
             for dict in ColorLibraries.flatColors {
-                if color == (dict["color"] as! UIColor) {
+                if color.isEquivalentToColor(dict["color"] as! UIColor){
+                    println("flat name match")
                     name = dict["title"] as? String
                 }
             }
         }
         if name == nil {
+            println("no name match in color libraries, using hex")
             name = color.toHexString()
         }
         

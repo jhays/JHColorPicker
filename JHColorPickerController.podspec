@@ -33,4 +33,5 @@ Pod::Spec.new do |s|
   s.dependency 'ChameleonFramework'
   s.dependency 'UIColor-Crayola'
   s.dependency 'UIColor-Pantone'
+  s.dependency 'ColorUtils'
 end

@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_ChameleonFramework_Default 2
 #define COCOAPODS_VERSION_PATCH_ChameleonFramework_Default 1
 
+// ColorUtils
+#define COCOAPODS_POD_AVAILABLE_ColorUtils
+#define COCOAPODS_VERSION_MAJOR_ColorUtils 1
+#define COCOAPODS_VERSION_MINOR_ColorUtils 1
+#define COCOAPODS_VERSION_PATCH_ColorUtils 3
+
 // JHColorPickerController
 #define COCOAPODS_POD_AVAILABLE_JHColorPickerController
 #define COCOAPODS_VERSION_MAJOR_JHColorPickerController 0
