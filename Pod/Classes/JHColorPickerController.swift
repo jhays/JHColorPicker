@@ -84,6 +84,7 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
     var selectedColor: UIColor?{
         didSet{
             selectedColorView.backgroundColor = selectedColor
+            infColorPicker.sourceColor = selectedColor
         }
     }
     var selectedColorName: String? 
@@ -167,6 +168,16 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
         }
     }
     
+    @IBAction func darkBtnPressed(sender: UIButton) {
+        
+        selectedColor = selectedColor?.darkerColor(0.01)
+    }
+    
+    
+    @IBAction func brightBtnPressed(sender: AnyObject) {
+        selectedColor = selectedColor?.lighterColor(0.01)
+    }
+
     func colorPickerDidChangeColor(notification:NSNotification) {
         if let userInfo = notification.userInfo {
             if let resultColor = userInfo["resultColor"] as? UIColor {
