@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "JHColorPickerController"
-  s.version          = "0.1.0"
+  s.version          = "1.0.0"
   s.summary          = "Color picker with several swatch libraries and custom color picker"
   s.description      = <<-DESC
                        JHColorPickerController is a color picker that includes swatches from Crayola, Pantone, and ChameleonFramework flat colors, as well as custom color picker
