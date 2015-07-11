@@ -135,7 +135,7 @@
                         <action selector="darkBtnPressed:" destination="-1" eventType="touchUpInside" id="Wc9-YX-gY0"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Color Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrY-cX-Pun">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrY-cX-Pun">
                     <rect key="frame" x="16" y="160" width="276" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="wOA-M3-Z9V"/>

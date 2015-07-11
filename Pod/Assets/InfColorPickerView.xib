@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" promptedForUpgradeToXcode5="NO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7702"/>
     </dependencies>
@@ -21,10 +21,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55" customClass="InfColorSquarePicker">
-                    <rect key="frame" x="12" y="1" width="296" height="276"/>
+                    <rect key="frame" x="12" y="0.0" width="296" height="296"/>
                     <subviews>
                         <view clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="50">
-                            <rect key="frame" x="19" y="0.0" width="258" height="258"/>
+                            <rect key="frame" x="19" y="19" width="258" height="258"/>
                             <subviews>
                                 <view clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="39" customClass="InfColorSquareView">
                                     <rect key="frame" x="1" y="1" width="256" height="256"/>
@@ -47,14 +47,14 @@
                     </accessibility>
                     <constraints>
                         <constraint firstAttribute="width" constant="296" id="GZ2-E7-XSF"/>
-                        <constraint firstAttribute="height" constant="276" id="nyg-Za-2yZ"/>
+                        <constraint firstAttribute="height" constant="296" id="nyg-Za-2yZ"/>
                     </constraints>
                     <connections>
                         <action selector="takeSquareValue:" destination="-1" eventType="valueChanged" id="56"/>
                     </connections>
                 </view>
                 <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="52" customClass="InfColorBarPicker">
-                    <rect key="frame" x="12" y="277" width="296" height="56"/>
+                    <rect key="frame" x="12" y="296" width="296" height="56"/>
                     <subviews>
                         <view clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="51">
                             <rect key="frame" x="19" y="7" width="258" height="42"/>
@@ -149,7 +149,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="55" secondAttribute="centerX" id="823-ow-kJw"/>
-                <constraint firstItem="55" firstAttribute="top" secondItem="34" secondAttribute="top" constant="1" id="ZgR-Y8-oWw"/>
+                <constraint firstItem="55" firstAttribute="top" secondItem="34" secondAttribute="top" id="ZgR-Y8-oWw"/>
                 <constraint firstItem="52" firstAttribute="top" secondItem="55" secondAttribute="bottom" id="ej6-6z-i5c"/>
                 <constraint firstItem="55" firstAttribute="centerX" secondItem="52" secondAttribute="centerX" id="ySB-fC-RhW"/>
             </constraints>

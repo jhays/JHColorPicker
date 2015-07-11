@@ -59,6 +59,7 @@
 		543729CBC3294660F368280B /* UIColor+CIELAB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4426D71288A871AD779A2691 /* UIColor+CIELAB.m */; };
 		5AC64EE226DC62EDC66F2FB1 /* InfColorPickerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C09DB329BC333CC45166E232 /* InfColorPickerNavigationController.m */; };
 		5F4EFD4C0CEF13B18FCA673F /* ChameleonStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D20D5621163F9BA37665333 /* ChameleonStatusBar.m */; };
+		606A5A201B517E5300DC5B96 /* InfColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 606A5A1F1B517E5300DC5B96 /* InfColorPickerView.xib */; };
 		60AD0B70B2F424AC4C6B5757 /* Pods-JHColorPickerController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3488C3BDC87434C8308651 /* Pods-JHColorPickerController_Tests-dummy.m */; };
 		616D9624AD8593E72BA1BCA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA5E615FCF9D1B33CE0779D /* QuartzCore.framework */; };
 		6255990D91439798AF4045E8 /* Pods-JHColorPickerController_Example-ColorUtils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0A470A705E748CC42C0B8 /* Pods-JHColorPickerController_Example-ColorUtils-dummy.m */; };
@@ -75,12 +76,10 @@
 		7448E14A0985244A4AA31C40 /* Pods-JHColorPickerController_Example-ColorUtils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47CCBC0C5931AD0DCECA9765 /* Pods-JHColorPickerController_Example-ColorUtils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74D7F16434235EB40DA88A33 /* Pods-JHColorPickerController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F21E5D1C6F28E053DE9142 /* Pods-JHColorPickerController_Example-dummy.m */; };
 		75F6E761E2052FBD4C0C6E14 /* Pods-JHColorPickerController_Tests-UIColor-Pantone-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2A231FF2D3DE9D312BF5FFF /* Pods-JHColorPickerController_Tests-UIColor-Pantone-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		76037BDB1F5F85F563BE0C09 /* InfColorPickerView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 93405FAC95724AC0DF9A3491 /* InfColorPickerView.xib */; };
 		7643B7B75EAD1BFB7C98DA35 /* UIColor+Crayola.h in Headers */ = {isa = PBXBuildFile; fileRef = BD19762C1B8BDBC5AC7C5A07 /* UIColor+Crayola.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76E657926B095E0A5857A5C2 /* UIColor+CIELAB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4426D71288A871AD779A2691 /* UIColor+CIELAB.m */; };
 		7AF5C052D2AA7C8D49BE8AE3 /* Crayola.h in Headers */ = {isa = PBXBuildFile; fileRef = AE45838D03F653E65DC83FC4 /* Crayola.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B8440C059946A9AD893D8A8 /* UIColor+CIELAB.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F0DD2271FEC224F6AE82C9A /* UIColor+CIELAB.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BF56D94B2AE7F47AC419F88 /* InfColorPickerView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 93405FAC95724AC0DF9A3491 /* InfColorPickerView.xib */; };
 		7C6CB6018F4992C9A2E017B2 /* InfColorSquarePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E3C6456C6495525FE0ED3E2 /* InfColorSquarePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D176C2B70678D0912477692 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 938C9255405FEF4B546E6483 /* UIViewController+Chameleon.m */; };
 		81F0134FABDD01C10CCA26BB /* InfColorPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD17B4B2E2C88DFF1183354D /* InfColorPickerController.m */; };
@@ -342,6 +341,7 @@
 		5AC6A92F1635753612AA35A7 /* ChameleonStatusBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonStatusBar.h; path = "Pod/Classes/Objective-C/ChameleonStatusBar.h"; sourceTree = "<group>"; };
 		5D20D5621163F9BA37665333 /* ChameleonStatusBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ChameleonStatusBar.m; path = "Pod/Classes/Objective-C/ChameleonStatusBar.m"; sourceTree = "<group>"; };
 		5ECD644E9D36D873BD80C9CA /* Pods-JHColorPickerController_Example-ColorUtils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JHColorPickerController_Example-ColorUtils-prefix.pch"; sourceTree = "<group>"; };
+		606A5A1F1B517E5300DC5B96 /* InfColorPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfColorPickerView.xib; sourceTree = "<group>"; };
 		606B9B6FB823F882061F8FBB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		61AAFEA57937225293BEEEC2 /* Pods-JHColorPickerController_Example-UIColor-Crayola-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JHColorPickerController_Example-UIColor-Crayola-dummy.m"; sourceTree = "<group>"; };
 		620C895CE320BC1254502DCF /* Pods-JHColorPickerController_Tests-UIColor-Pantone-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-JHColorPickerController_Tests-UIColor-Pantone-dummy.m"; path = "../Pods-JHColorPickerController_Tests-UIColor-Pantone/Pods-JHColorPickerController_Tests-UIColor-Pantone-dummy.m"; sourceTree = "<group>"; };
@@ -366,7 +366,6 @@
 		8F18F3083E632D84324D0C56 /* InfColorBarPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InfColorBarPicker.h; sourceTree = "<group>"; };
 		8FF2935CFB6D8EF0A55A6B67 /* InfColorPickerNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InfColorPickerNavigationController.h; sourceTree = "<group>"; };
 		9097529AADE9B5EA1D8C4A00 /* Pods-JHColorPickerController_Tests-ChameleonFramework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-JHColorPickerController_Tests-ChameleonFramework-prefix.pch"; path = "../Pods-JHColorPickerController_Tests-ChameleonFramework/Pods-JHColorPickerController_Tests-ChameleonFramework-prefix.pch"; sourceTree = "<group>"; };
-		93405FAC95724AC0DF9A3491 /* InfColorPickerView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = InfColorPickerView.xib; sourceTree = "<group>"; };
 		938C9255405FEF4B546E6483 /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Chameleon.m"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.m"; sourceTree = "<group>"; };
 		94F301EB9193A4EA924A801E /* Pods-JHColorPickerController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JHColorPickerController_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		95878E0CFFF0AE698F65F1EB /* Pods-JHColorPickerController_Tests-UIColor-Crayola-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-JHColorPickerController_Tests-UIColor-Crayola-umbrella.h"; path = "../Pods-JHColorPickerController_Tests-UIColor-Crayola/Pods-JHColorPickerController_Tests-UIColor-Crayola-umbrella.h"; sourceTree = "<group>"; };
@@ -650,7 +649,6 @@
 				CD17B4B2E2C88DFF1183354D /* InfColorPickerController.m */,
 				8FF2935CFB6D8EF0A55A6B67 /* InfColorPickerNavigationController.h */,
 				C09DB329BC333CC45166E232 /* InfColorPickerNavigationController.m */,
-				93405FAC95724AC0DF9A3491 /* InfColorPickerView.xib */,
 				9E3C6456C6495525FE0ED3E2 /* InfColorSquarePicker.h */,
 				D591E3900E1A293EA5FA55B7 /* InfColorSquarePicker.m */,
 				DFE200309E54974F24E0802D /* InfHSBSupport.h */,
@@ -704,6 +702,7 @@
 		2E919E1204A5C42BE5994FE0 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				606A5A1F1B517E5300DC5B96 /* InfColorPickerView.xib */,
 				2BEE71DF42B097FB0CB2998F /* JHColorPickerController.xib */,
 			);
 			path = Assets;
@@ -1382,6 +1381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				606A5A201B517E5300DC5B96 /* InfColorPickerView.xib in Resources */,
 				16539B54D4A57FE0976A91C7 /* JHColorPickerController.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1489,7 +1489,6 @@
 				E78759FC53CEDD185ED1B622 /* InfColorIndicatorView.m in Sources */,
 				FD00B9EA7CAC9EDDB52C9C4B /* InfColorPickerController.m in Sources */,
 				5AC64EE226DC62EDC66F2FB1 /* InfColorPickerNavigationController.m in Sources */,
-				7BF56D94B2AE7F47AC419F88 /* InfColorPickerView.xib in Sources */,
 				3562B1376B2C07A312FDFD8B /* InfColorSquarePicker.m in Sources */,
 				3306FB6CFCE363B2E8D89500 /* InfHSBSupport.m in Sources */,
 				BA5AF8A5F8EF04DBD984F51E /* InfSourceColorView.m in Sources */,
@@ -1508,7 +1507,6 @@
 				AD0C93F0E135B590E8AB74C8 /* InfColorIndicatorView.m in Sources */,
 				81F0134FABDD01C10CCA26BB /* InfColorPickerController.m in Sources */,
 				9A09CD988278C05A83D4B4CB /* InfColorPickerNavigationController.m in Sources */,
-				76037BDB1F5F85F563BE0C09 /* InfColorPickerView.xib in Sources */,
 				9A79885017B61EA1B4AE1CAA /* InfColorSquarePicker.m in Sources */,
 				D17BCB2A718228A1D085F319 /* InfHSBSupport.m in Sources */,
 				7061FF139935F9F9ABA3BB3C /* InfSourceColorView.m in Sources */,
