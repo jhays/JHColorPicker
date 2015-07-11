@@ -14,6 +14,34 @@ import ChameleonFramework
 
 class ColorLibraries : NSObject {
     
+    class func nameForColor(color:UIColor) -> String{
+        var name:String?
+        for dict in ColorLibraries.crayolaColors {
+            if color == (dict["color"] as! UIColor) {
+                name = dict["title"] as? String
+            }
+        }
+        if name == nil {
+            for dict in ColorLibraries.pantoneColors {
+                if color == (dict["color"] as! UIColor) {
+                    name = dict["title"] as? String
+                }
+            }
+        }
+        if name == nil {
+            for dict in ColorLibraries.flatColors {
+                if color == (dict["color"] as! UIColor) {
+                    name = dict["title"] as? String
+                }
+            }
+        }
+        if name == nil {
+            name = color.toHexString()
+        }
+        
+        return name!
+    }
+    
     static var crayolaColors:Array<Dictionary<String,AnyObject>>  = [["color": UIColor.crayolaAbsoluteZeroColor(), "title" : "Absolute Zero"]
         ,["color": UIColor.crayolaAlienArmpitColor(), "title" : "Alien Armpit"]
         ,["color": UIColor.crayolaAlloyOrangeColor(), "title" : "Alloy Orange"]

@@ -49,6 +49,8 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
     
     @IBOutlet weak var previousColorView:UIView!
     @IBOutlet weak var selectedColorView:UIView!
+    @IBOutlet weak var previousColorNameLabel: UILabel!
+    @IBOutlet weak var selectedColorNameLabel: UILabel!
     @IBOutlet weak var categorySelectorSegmentedControl: UISegmentedControl!
     @IBOutlet weak var swatchView:UIView!
     @IBOutlet weak var swatchCollectionView:UICollectionView!
@@ -87,10 +89,18 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
             infColorPicker.sourceColor = selectedColor
         }
     }
-    var selectedColorName: String? 
+    var selectedColorName: String? {
+        didSet{
+            selectedColorNameLabel.text = selectedColorName
+        }
+    }
 
     public var previousColor: UIColor?
-    public var previousColorName:String?
+    public var previousColorName:String?{
+        didSet{
+            previousColorNameLabel.text = previousColorName
+        }
+    }
     
     convenience init() {
         let bundle = NSBundle(forClass:JHColorPickerController.self)
@@ -124,6 +134,7 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
         
         if let previousColor = previousColor {
             previousColorView.backgroundColor = previousColor
+            previousColorName = ColorLibraries.nameForColor(previousColor)
         }
     }
     
@@ -182,6 +193,7 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
         if let userInfo = notification.userInfo {
             if let resultColor = userInfo["resultColor"] as? UIColor {
                 selectedColor = resultColor
+                selectedColorName = selectedColor!.toHexString()
             }
         }
     }
