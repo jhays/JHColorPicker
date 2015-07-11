@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
-    'JHColorPickerController' => ['Pod/Assets/gradient.png','Pod/Assets/JHColorPickerController.xib']
+    'JHColorPickerController' => ['Pod/Assets/*.png','Pod/Assets/*.xib']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
