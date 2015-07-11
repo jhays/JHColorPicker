@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E9F820A44DB3D64420FB5AC6"
+               BlueprintIdentifier = "E8759DDF7B0B5C66C7126DB0"
                BuildableName = "JHColorPickerController.bundle"
                BlueprintName = "Pods-JHColorPickerController_Tests-JHColorPickerController-JHColorPickerController"
                ReferencedContainer = "container:Pods.xcodeproj">

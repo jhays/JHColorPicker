@@ -7,11 +7,27 @@
 
 JHColorPickerController is a color picker that includes swatches from Crayola, Pantone, and ChameleonFramework flat colors, as well as a custom color picker
 
+This color picker is a combination of the following pods:
+
+InfinitApps/InfColorPicker 
+https://github.com/InfinitApps/InfColorPicker
+
+ViccAlexander/Chameleon
+https://github.com/ViccAlexander/Chameleon
+
+mihaelamj/uicolor-crayola
+https://github.com/mihaelamj/uicolor-crayola
+
+mihaelamj/uicolor-pantone
+https://github.com/mihaelamj/uicolor-pantone
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+UIKit
 
 ## Installation
 
@@ -24,7 +40,7 @@ pod "JHColorPickerController"
 
 ## Author
 
-JHays, julian@devmode.com
+JHays, orbosphere@gmail.com
 
 ## License
 
