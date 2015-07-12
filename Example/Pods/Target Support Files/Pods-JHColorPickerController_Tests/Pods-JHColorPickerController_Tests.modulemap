@@ -1,6 +1,0 @@
-framework module Pods_JHColorPickerController_Tests {
-  umbrella header "Pods-JHColorPickerController_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}
