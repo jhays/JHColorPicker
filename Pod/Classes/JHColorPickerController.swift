@@ -13,27 +13,35 @@ import UIColor_Crayola
 import UIColor_Pantone
 
 public protocol JHColorPickerControllerDelegate {
+    func colorSaved(color:UIColor, name:String?)
     func colorSelected(color:UIColor, name:String?)
+    func colorPickerCancelled()
 }
 
 class SwatchCell: UICollectionViewCell {
-    var title: UILabel!
-    var colorView: UIView!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var colorView: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         colorView = UIView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height - 28))
         title = UILabel(frame: CGRect(x: 0, y: frame.size.height - 28, width: frame.size.width, height: 28))
+        
+        self.addSubview(colorView)
+        self.addSubview(title)
+        
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override func awakeFromNib() {
+        contentView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight;
         title.font = UIFont(name: "HelveticaNeue-Light", size: 14.0)
         title.textAlignment = NSTextAlignment.Center
         title.numberOfLines = 2
         title.lineBreakMode = NSLineBreakMode.ByWordWrapping
-        self.addSubview(colorView)
-        self.addSubview(title)
-    }
-
-    required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
 }
@@ -57,6 +65,7 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
     @IBOutlet weak var customView:UIView!
     
     public var delegate:JHColorPickerControllerDelegate?
+    public var completion : ((UIColor) -> ())?
     var colorSwatches = Array<Dictionary<String,AnyObject>>()
     var infColorPicker : InfColorPickerController!
     
@@ -87,6 +96,7 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
         didSet{
             selectedColorView.backgroundColor = selectedColor
             infColorPicker.sourceColor = selectedColor
+            delegate?.colorSelected(selectedColor!, name: selectedColorName)
         }
     }
     var selectedColorName: String? {
@@ -109,7 +119,9 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        swatchCollectionView.registerClass(SwatchCell.self, forCellWithReuseIdentifier: "swatchCell")
+        let bundle = NSBundle(forClass:JHColorPickerController.self)
+        swatchCollectionView.registerNib(UINib(nibName: "JHColorPickerController.bundle/SwatchCell", bundle: bundle), forCellWithReuseIdentifier: "swatchCell")
+//        swatchCollectionView.registerClass(SwatchCell.self, forCellWithReuseIdentifier: "swatchCell")
         loadNavButtons()
         
         colorSwatches = ColorLibraries.crayolaColors
@@ -127,6 +139,14 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
     
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    public override func willTransitionToTraitCollection(newCollection: UITraitCollection, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        coordinator.animateAlongsideTransition({ (context) -> Void in
+            
+        }, completion: { (context) -> Void in
+            self.swatchCollectionView.collectionViewLayout.invalidateLayout()
+        })
     }
     
     public override func viewWillAppear(animated: Bool) {
@@ -151,13 +171,15 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
     }
 
     func cancelBtnPressed(sender:UIButton) {
-        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        delegate?.colorPickerCancelled()
     }
     
     func saveBtnPressed(sender:UIButton) {
         if let color = selectedColor {
-            delegate?.colorSelected(color, name: selectedColorName)
-            self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+            if let completion = completion {
+                completion(color)
+            }
+            delegate?.colorSaved(color, name: selectedColorName)
         }else {
             
         }
@@ -219,28 +241,35 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
     }
     
     public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCellWithReuseIdentifier("swatchCell", forIndexPath: indexPath) as! SwatchCell
-    //cell.title.text = self.colorSwatches[indexPath.row % 5]
-    //let curr = indexPath.row % 5  + 1
-    cell.title.text = colorSwatches[indexPath.item]["title"] as? String
-    cell.colorView.backgroundColor = colorSwatches[indexPath.item]["color"] as? UIColor
-    //cell.pinImage.image = UIImage(named: imgName)
-    
-    return cell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("swatchCell", forIndexPath: indexPath) as! SwatchCell
+        //cell.title.text = self.colorSwatches[indexPath.row % 5]
+        //let curr = indexPath.row % 5  + 1
+
+        cell.title.text = colorSwatches[indexPath.item]["title"] as? String
+        cell.colorView.backgroundColor = colorSwatches[indexPath.item]["color"] as? UIColor
+        //cell.pinImage.image = UIImage(named: imgName)
+        
+        return cell
     }
     
     func collectionView(collectionView: UICollectionView!,
         layout collectionViewLayout: UICollectionViewLayout!,
         sizeForItemAtIndexPath indexPath: NSIndexPath!) -> CGSize {
-            var height = (swatchCollectionView.frame.size.height - 16) / 2
-            var width = (self.view.frame.size.width - 48) / 2
-    return CGSize(width: width, height: height)
+            if self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Compact {
+                var height = (swatchCollectionView.frame.size.height - 16) / 2
+                var width = (swatchCollectionView.frame.size.width - 16) / 2
+                return CGSize(width: width, height: height)
+            }else {
+                var height = (swatchCollectionView.frame.size.height - 16) / 2
+                var width = (self.view.frame.size.width - 48) / 2
+                return CGSize(width: width, height: height)
+            }
     }
     
     func collectionView(collectionView: UICollectionView!,
         layout collectionViewLayout: UICollectionViewLayout!,
         insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-    return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
 }

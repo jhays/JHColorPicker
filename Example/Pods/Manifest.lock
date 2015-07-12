@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   ChameleonFramework: 3476f813ac1615aef0a9a958f05520dfca47e09d
   ColorUtils: f99c501f9caf5374b35480a281168565a24bdb6d
-  JHColorPickerController: fc4365c16b80e77f9d1381ad9c5d869a54f991a3
+  JHColorPickerController: 5ec6c4cc55184c35d8e573dc28cac9104bddf713
   UIColor-Crayola: 0d2f68032cbea6ba4669b360ffb641d203b41a0d
   UIColor-Pantone: b6e5ab4c032f704f75453cfc0e8a07f68624cff5
 

@@ -31,12 +31,24 @@ class ViewController: UIViewController, JHColorPickerControllerDelegate {
         let colorPickerController = JHColorPickerController()
         colorPickerController.delegate = self
         colorPickerController.previousColor = self.view.backgroundColor
+        colorPickerController.completion = { selectedColor in
+             self.view.backgroundColor = selectedColor
+        }
         self.presentViewController(UINavigationController(rootViewController: colorPickerController), animated: true, completion: nil)
     }
  
     
-    func colorSelected(color:UIColor, name:String?) {
-        self.view.backgroundColor = color
+    func colorSaved(color:UIColor, name:String?) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func colorSelected(color: UIColor, name: String?) {
+        //useful if you are displaying in a popover and you want to use the color as they change it
+    }
+    
+    func colorPickerCancelled() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
+
 
