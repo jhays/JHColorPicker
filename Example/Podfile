@@ -4,5 +4,4 @@ use_frameworks!
 target 'JHColorPickerController_Example', :exclusive => true do
   pod "JHColorPickerController", :path => "../"
 end
-  
-end
+
