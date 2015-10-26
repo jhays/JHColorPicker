@@ -38,7 +38,7 @@
 
 //------------------------------------------------------------------------------
 
-- (NSUInteger) supportedInterfaceOrientations
+- (UIInterfaceOrientationMask) supportedInterfaceOrientations
 {
 	return self.topViewController.supportedInterfaceOrientations;
 }

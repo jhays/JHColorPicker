@@ -146,7 +146,7 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 
 //------------------------------------------------------------------------------
 
-- (NSUInteger) supportedInterfaceOrientations
+- (UIInterfaceOrientationMask) supportedInterfaceOrientations
 {
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 		return UIInterfaceOrientationMaskAll;
