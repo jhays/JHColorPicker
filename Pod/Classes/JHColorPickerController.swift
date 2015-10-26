@@ -160,6 +160,7 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
         if let previousColor = previousColor {
             previousColorView.backgroundColor = previousColor
             previousColorName = ColorLibraries.nameForColor(previousColor)
+            infColorPicker.sourceColor = previousColor
         }
         applyLabelColors()
     }
