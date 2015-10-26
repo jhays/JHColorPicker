@@ -11,14 +11,22 @@ import JHColorPickerController
 
 class ViewController: UIViewController, JHColorPickerControllerDelegate {
     
+    @IBOutlet weak var changeColorBtn:UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        changeColorBtn.layer.borderColor = UIColor.whiteColor().CGColor
+        changeColorBtn.layer.borderWidth = 1.0
+        changeColorBtn.layer.cornerRadius = 4.0
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
+        if let color = view.backgroundColor {
+            applyViewableTextColorForColor(color)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +45,24 @@ class ViewController: UIViewController, JHColorPickerControllerDelegate {
         self.presentViewController(UINavigationController(rootViewController: colorPickerController), animated: true, completion: nil)
     }
  
+    func applyViewableTextColorForColor(color:UIColor) {
+        
+        var textColor = UIColor.blackColor()
+        var shadowColor = UIColor.whiteColor()
+        
+        if !color.isLight() {
+            textColor = UIColor.whiteColor()
+            shadowColor = UIColor.blackColor()
+        }
+
+        changeColorBtn.setTitleColor(textColor, forState: .Normal)
+        changeColorBtn.layer.borderColor = textColor.CGColor
+        changeColorBtn.layer.shadowColor = shadowColor.CGColor
+        changeColorBtn.layer.shadowOffset = CGSize(width: 0, height: 0)
+        changeColorBtn.layer.shadowOpacity = 1.0
+        changeColorBtn.layer.shadowRadius = 2
+
+    }
     
     func colorSaved(color:UIColor, name:String?) {
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -51,4 +77,23 @@ class ViewController: UIViewController, JHColorPickerControllerDelegate {
     }
 }
 
+extension UIColor {
+    
+    func isLight() -> Bool
+    {
+        let components = CGColorGetComponents(self.CGColor)
+        let comp0 = components[0] * 299
+        let comp1 = components[1] * 587
+        let comp2 = components[2] * 114
+        let brightness = (comp0 + comp1 + comp2) / 1000
+        
+        if brightness < 0.5 {
+            return false
+        }
+        else {
+            return true
+        }
+    }
+    
+}
 

@@ -17,10 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sf-jr-XTm">
-                                <rect key="frame" x="253" y="285" width="95" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sf-jr-XTm">
+                                <rect key="frame" x="241" y="283" width="120" height="34"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="nQt-xQ-KlM"/>
+                                    <constraint firstAttribute="height" constant="34" id="qJJ-as-8hB"/>
+                                </constraints>
                                 <state key="normal" title="Change Color">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -36,9 +40,13 @@
                             <constraint firstAttribute="centerX" secondItem="5sf-jr-XTm" secondAttribute="centerX" constant="-0.5" id="6DK-pF-DKZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="changeColorBtn" destination="5sf-jr-XTm" id="DmF-5J-cxs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="631" y="466"/>
         </scene>
     </scenes>
 </document>
