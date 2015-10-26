@@ -32,12 +32,12 @@ class SwatchCell: UICollectionViewCell {
         
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     override func awakeFromNib() {
-        contentView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight;
+        contentView.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
         title.font = UIFont(name: "HelveticaNeue-Light", size: 14.0)
         title.textAlignment = NSTextAlignment.Center
         title.numberOfLines = 2
@@ -57,6 +57,8 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
     
     @IBOutlet weak var previousColorView:UIView!
     @IBOutlet weak var selectedColorView:UIView!
+    @IBOutlet weak var previousColorLabel:UILabel!
+    @IBOutlet weak var selectedColorLabel:UILabel!
     @IBOutlet weak var previousColorNameLabel: UILabel!
     @IBOutlet weak var selectedColorNameLabel: UILabel!
     @IBOutlet weak var categorySelectorSegmentedControl: UISegmentedControl!
@@ -97,6 +99,7 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
             selectedColorView.backgroundColor = selectedColor
             infColorPicker.sourceColor = selectedColor
             delegate?.colorSelected(selectedColor!, name: selectedColorName)
+            applyLabelColors()
         }
     }
     var selectedColorName: String? {
@@ -132,6 +135,8 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
         customView.addSubview(infColorPicker.view)
         infColorPicker.didMoveToParentViewController(self)
         
+        
+        
         //this is unfortunate, but any attempts to implement InfColorPickerDelegate have resulted in failure to compile. 
         //must be something to do with communicating between ObjC and Swift... this notification will have to do for now.
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "colorPickerDidChangeColor:", name: "CUSTOM_COLOR_DID_CHANGE", object: nil)
@@ -151,11 +156,12 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
     
     public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         if let previousColor = previousColor {
             previousColorView.backgroundColor = previousColor
             previousColorName = ColorLibraries.nameForColor(previousColor)
         }
+        applyLabelColors()
     }
     
     public override func viewDidAppear(animated:Bool) {
@@ -169,12 +175,59 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
         self.navigationItem.leftBarButtonItem = leftCancelBtn
         self.navigationItem.rightBarButtonItem = rightSaveBtn
     }
+    
+    func applyLabelColors() {
+        
+        var prevTextColor = UIColor.blackColor()
+        var prevShadowColor = UIColor.whiteColor()
+        
+        if let previousColor = previousColor {
+            if !previousColor.isLight() {
+                prevTextColor = UIColor.whiteColor()
+                prevShadowColor = UIColor.blackColor()
+            }
+        }
+        
+        var selectedTextColor = UIColor.blackColor()
+        var selectedShadowColor = UIColor.whiteColor()
+        
+        if let selectedColor = selectedColor {
+            if !selectedColor.isLight() {
+                selectedTextColor = UIColor.whiteColor()
+                selectedShadowColor = UIColor.blackColor()
+            }
+        }
+        
+        previousColorLabel.textColor = prevTextColor
+        previousColorLabel.layer.shadowColor = prevShadowColor.CGColor
+        previousColorLabel.layer.shadowOffset = CGSize(width: 0, height: 0)
+        previousColorLabel.layer.shadowOpacity = 1.0
+        previousColorLabel.layer.shadowRadius = 2
+        
+        previousColorNameLabel.textColor = prevTextColor
+        previousColorNameLabel.layer.shadowColor = prevShadowColor.CGColor
+        previousColorNameLabel.layer.shadowOffset = CGSize(width: 0, height: 0)
+        previousColorNameLabel.layer.shadowOpacity = 1.0
+        previousColorNameLabel.layer.shadowRadius = 2
+        
+        selectedColorLabel.textColor = selectedTextColor
+        selectedColorLabel.layer.shadowColor = selectedShadowColor.CGColor
+        selectedColorLabel.layer.shadowOffset = CGSize(width: 0, height: 0)
+        selectedColorLabel.layer.shadowOpacity = 1.0
+        selectedColorLabel.layer.shadowRadius = 2
+        
+        selectedColorNameLabel.textColor = selectedTextColor
+        selectedColorNameLabel.layer.shadowColor = selectedShadowColor.CGColor
+        selectedColorNameLabel.layer.shadowOffset = CGSize(width: 0, height: 0)
+        selectedColorNameLabel.layer.shadowOpacity = 1.0
+        selectedColorNameLabel.layer.shadowRadius = 2
+    }
 
-    func cancelBtnPressed(sender:UIButton) {
+    @IBAction func cancelBtnPressed(sender:UIButton) {
         delegate?.colorPickerCancelled()
     }
     
-    func saveBtnPressed(sender:UIButton) {
+    @IBAction func saveBtnPressed(sender:UIButton) {
         if let color = selectedColor {
             if let completion = completion {
                 completion(color)
@@ -218,6 +271,7 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
                 selectedColorName = selectedColor!.toHexString()
             }
         }
+        applyLabelColors()
     }
     
     //MARK: UICollectionViewDelegate
@@ -256,12 +310,12 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
         layout collectionViewLayout: UICollectionViewLayout!,
         sizeForItemAtIndexPath indexPath: NSIndexPath!) -> CGSize {
             if self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Compact {
-                var height = (swatchCollectionView.frame.size.height - 16) / 2
-                var width = (swatchCollectionView.frame.size.width - 16) / 2
+                let height = (swatchCollectionView.frame.size.height - 16) / 2
+                let width = (swatchCollectionView.frame.size.width - 16) / 2
                 return CGSize(width: width, height: height)
             }else {
-                var height = (swatchCollectionView.frame.size.height - 16) / 2
-                var width = (self.view.frame.size.width - 48) / 2
+                let height = (swatchCollectionView.frame.size.height - 16) / 2
+                let width = (self.view.frame.size.width - 48) / 2
                 return CGSize(width: width, height: height)
             }
     }

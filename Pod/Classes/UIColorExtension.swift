@@ -85,4 +85,21 @@ extension UIColor {
         }
     }
 
+
+    func isLight() -> Bool
+    {
+        let components = CGColorGetComponents(self.CGColor)
+        let comp0 = components[0] * 299
+        let comp1 = components[1] * 587
+        let comp2 = components[2] * 114
+        let brightness = (comp0 + comp1 + comp2) / 1000
+        
+        if brightness < 0.5 {
+            return false
+        }
+        else {
+            return true
+        }
+    }
+
 }

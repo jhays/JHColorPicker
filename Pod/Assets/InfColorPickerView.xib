@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7702"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9059"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfColorPickerController">
@@ -17,7 +18,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="34">
-            <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55" customClass="InfColorSquarePicker">
@@ -28,19 +29,22 @@
                             <subviews>
                                 <view clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="39" customClass="InfColorSquareView">
                                     <rect key="frame" x="1" y="1" width="256" height="256"/>
+                                    <animations/>
                                     <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <accessibility key="accessibilityConfiguration" hint="" label="">
-                                        <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                        <accessibilityTraits key="traits" notEnabled="YES"/>
                                         <bool key="isElement" value="NO"/>
                                     </accessibility>
                                 </view>
                             </subviews>
+                            <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <accessibility key="accessibilityConfiguration">
-                                <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                <accessibilityTraits key="traits" notEnabled="YES"/>
                             </accessibility>
                         </view>
                     </subviews>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <accessibility key="accessibilityConfiguration" hint="Sets the saturation and brightness of the color." label="Color square">
                         <bool key="isElement" value="YES"/>
@@ -54,23 +58,26 @@
                     </connections>
                 </view>
                 <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="52" customClass="InfColorBarPicker">
-                    <rect key="frame" x="12" y="296" width="296" height="56"/>
+                    <rect key="frame" x="12" y="284" width="296" height="56"/>
                     <subviews>
                         <view clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="51">
                             <rect key="frame" x="19" y="7" width="258" height="42"/>
                             <subviews>
                                 <view clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="41" customClass="InfColorBarView">
                                     <rect key="frame" x="1" y="1" width="256" height="40"/>
+                                    <animations/>
                                     <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <accessibility key="accessibilityConfiguration" hint="" label="">
-                                        <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                        <accessibilityTraits key="traits" notEnabled="YES"/>
                                         <bool key="isElement" value="NO"/>
                                     </accessibility>
                                 </view>
                             </subviews>
+                            <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                     </subviews>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <accessibility key="accessibilityConfiguration" hint="Sets the hue of the color." label="Color bar">
                         <bool key="isElement" value="YES"/>
@@ -91,6 +98,7 @@
                             <subviews>
                                 <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66" customClass="InfSourceColorView">
                                     <rect key="frame" x="1" y="1" width="80" height="40"/>
+                                    <animations/>
                                     <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <accessibility key="accessibilityConfiguration" label="Original color">
                                         <bool key="isElement" value="YES"/>
@@ -100,6 +108,7 @@
                                     </connections>
                                 </view>
                             </subviews>
+                            <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="69">
@@ -107,6 +116,7 @@
                             <subviews>
                                 <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="70" customClass="InfSourceColorView">
                                     <rect key="frame" x="1" y="1" width="40" height="40"/>
+                                    <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <accessibility key="accessibilityConfiguration" label="White">
                                         <bool key="isElement" value="YES"/>
@@ -117,6 +127,7 @@
                                 </view>
                                 <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="72" customClass="InfSourceColorView">
                                     <rect key="frame" x="42" y="1" width="40" height="40"/>
+                                    <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <accessibility key="accessibilityConfiguration" label="Black">
                                         <bool key="isElement" value="YES"/>
@@ -126,6 +137,7 @@
                                     </connections>
                                 </view>
                             </subviews>
+                            <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                         <view clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="62">
@@ -133,6 +145,7 @@
                             <subviews>
                                 <view clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43">
                                     <rect key="frame" x="1" y="1" width="80" height="40"/>
+                                    <animations/>
                                     <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <accessibility key="accessibilityConfiguration" label="New color">
                                         <accessibilityTraits key="traits" none="YES"/>
@@ -140,26 +153,24 @@
                                     </accessibility>
                                 </view>
                             </subviews>
+                            <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                     </subviews>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="55" secondAttribute="centerX" id="823-ow-kJw"/>
                 <constraint firstItem="55" firstAttribute="top" secondItem="34" secondAttribute="top" id="ZgR-Y8-oWw"/>
-                <constraint firstItem="52" firstAttribute="top" secondItem="55" secondAttribute="bottom" id="ej6-6z-i5c"/>
+                <constraint firstItem="52" firstAttribute="top" secondItem="55" secondAttribute="bottom" constant="-12" id="ej6-6z-i5c"/>
                 <constraint firstItem="55" firstAttribute="centerX" secondItem="52" secondAttribute="centerX" id="ySB-fC-RhW"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

@@ -19,14 +19,14 @@ class ColorLibraries : NSObject {
         var name:String?
         for dict in ColorLibraries.crayolaColors {
             if color.isEquivalentToColor(dict["color"] as! UIColor) {
-                println("crayola name match")
+                print("crayola name match")
                 name = dict["title"] as? String
             }
         }
         if name == nil {
             for dict in ColorLibraries.pantoneColors {
                 if color.isEquivalentToColor(dict["color"] as! UIColor) {
-                    println("pantone name match")
+                    print("pantone name match")
                     name = dict["title"] as? String
                 }
             }
@@ -34,13 +34,13 @@ class ColorLibraries : NSObject {
         if name == nil {
             for dict in ColorLibraries.flatColors {
                 if color.isEquivalentToColor(dict["color"] as! UIColor){
-                    println("flat name match")
+                    print("flat name match")
                     name = dict["title"] as? String
                 }
             }
         }
         if name == nil {
-            println("no name match in color libraries, using hex")
+            print("no name match in color libraries, using hex")
             name = color.toHexString()
         }
         
