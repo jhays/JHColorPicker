@@ -117,13 +117,13 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
     
     convenience init() {
         let bundle = NSBundle(forClass:JHColorPickerController.self)
-        self.init(nibName: "JHColorPickerController.bundle/JHColorPickerController", bundle: bundle)
+        self.init(nibName: "JHColorPicker.bundle/JHColorPickerController", bundle: bundle)
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         let bundle = NSBundle(forClass:JHColorPickerController.self)
-        swatchCollectionView.registerNib(UINib(nibName: "JHColorPickerController.bundle/SwatchCell", bundle: bundle), forCellWithReuseIdentifier: "swatchCell")
+        swatchCollectionView.registerNib(UINib(nibName: "JHColorPicker.bundle/SwatchCell", bundle: bundle), forCellWithReuseIdentifier: "swatchCell")
 //        swatchCollectionView.registerClass(SwatchCell.self, forCellWithReuseIdentifier: "swatchCell")
         loadNavButtons()
         

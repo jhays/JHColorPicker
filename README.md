@@ -1,13 +1,13 @@
-# JHColorPickerController
+# JHColorPicker
 
-[![CI Status](http://img.shields.io/travis/JHays/JHColorPickerController.svg?style=flat)](https://travis-ci.org/JHays/JHColorPickerController)
-[![Version](https://img.shields.io/cocoapods/v/JHColorPickerController.svg?style=flat)](http://cocoapods.org/pods/JHColorPickerController)
-[![License](https://img.shields.io/cocoapods/l/JHColorPickerController.svg?style=flat)](http://cocoapods.org/pods/JHColorPickerController)
-[![Platform](https://img.shields.io/cocoapods/p/JHColorPickerController.svg?style=flat)](http://cocoapods.org/pods/JHColorPickerController)
+[![CI Status](http://img.shields.io/travis/JHays/JHColorPicker.svg?style=flat)](https://travis-ci.org/JHays/JHColorPicker)
+[![Version](https://img.shields.io/cocoapods/v/JHColorPicker.svg?style=flat)](http://cocoapods.org/pods/JHColorPicker)
+[![License](https://img.shields.io/cocoapods/l/JHColorPicker.svg?style=flat)](http://cocoapods.org/pods/JHColorPicker)
+[![Platform](https://img.shields.io/cocoapods/p/JHColorPicker.svg?style=flat)](http://cocoapods.org/pods/JHColorPicker)
 
-JHColorPickerController is a color picker that includes swatches from Crayola, Pantone, and ChameleonFramework flat colors, as well as a custom color picker
+JHColorPicker is a color picker that includes swatches from Crayola, Pantone, and ChameleonFramework flat colors, as well as a custom color picker
 
-![Screenshot](https://raw.githubusercontent.com/jhays/JHColorPickerController/master/demo.gif)
+![Screenshot](https://raw.githubusercontent.com/jhays/JHColorPicker/master/JHColorPicker-Demo.gif)
 
 This color picker is a combination of the following pods:
 
@@ -38,11 +38,11 @@ Included via pod dependency:
 
 ## Installation
 
-JHColorPickerController is available through [CocoaPods](http://cocoapods.org). To install
+JHColorPicker is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "JHColorPickerController"
+pod "JHColorPicker"
 ```
 
 ## Author
@@ -51,4 +51,4 @@ JHays, orbosphere@gmail.com
 
 ## License
 
-JHColorPickerController is available under the MIT license. See the LICENSE file for more info.
+JHColorPicker is available under the MIT license. See the LICENSE file for more info.

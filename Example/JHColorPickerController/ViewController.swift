@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JHColorPickerController
+import JHColorPicker
 
 class ViewController: UIViewController, JHColorPickerControllerDelegate {
     

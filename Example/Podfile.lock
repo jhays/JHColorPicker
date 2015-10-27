@@ -3,7 +3,7 @@ PODS:
   - ChameleonFramework/Swift (2.0.4):
     - ChameleonFramework/Default
   - ColorUtils (1.1.3)
-  - JHColorPickerController (1.0.1):
+  - JHColorPicker (1.0.2):
     - ChameleonFramework/Swift
     - ColorUtils
     - UIColor-Crayola
@@ -12,16 +12,16 @@ PODS:
   - UIColor-Pantone (1.0)
 
 DEPENDENCIES:
-  - JHColorPickerController (from `../`)
+  - JHColorPicker (from `../`)
 
 EXTERNAL SOURCES:
-  JHColorPickerController:
+  JHColorPicker:
     :path: ../
 
 SPEC CHECKSUMS:
   ChameleonFramework: 5abe69b1f2a6cc79c3c435fcd9d3d855748225ee
   ColorUtils: f99c501f9caf5374b35480a281168565a24bdb6d
-  JHColorPickerController: 95dc8420b1669c45690177ea66256e2aa30e7691
+  JHColorPicker: 7727c85508f06a478a7e256298903edfca039d4b
   UIColor-Crayola: 0d2f68032cbea6ba4669b360ffb641d203b41a0d
   UIColor-Pantone: b6e5ab4c032f704f75453cfc0e8a07f68624cff5
 
