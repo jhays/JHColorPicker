@@ -27,6 +27,15 @@ https://github.com/mihaelamj/uicolor-pantone
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+```swift
+  let colorPickerController = JHColorPickerController()
+  colorPickerController.delegate = self
+  colorPickerController.previousColor = self.view.backgroundColor
+  colorPickerController.completion = { selectedColor in
+    self.view.backgroundColor = selectedColor
+  }
+  self.presentViewController(UINavigationController(rootViewController: colorPickerController), animated: true, completion: nil)
+```
 ## Requirements
 iOS 8+, XCode 7+
 
