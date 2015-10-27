@@ -1,6 +1,5 @@
 # JHColorPicker
 
-[![CI Status](http://img.shields.io/travis/JHays/JHColorPicker.svg?style=flat)](https://travis-ci.org/JHays/JHColorPicker)
 [![Version](https://img.shields.io/cocoapods/v/JHColorPicker.svg?style=flat)](http://cocoapods.org/pods/JHColorPicker)
 [![License](https://img.shields.io/cocoapods/l/JHColorPicker.svg?style=flat)](http://cocoapods.org/pods/JHColorPicker)
 [![Platform](https://img.shields.io/cocoapods/p/JHColorPicker.svg?style=flat)](http://cocoapods.org/pods/JHColorPicker)
