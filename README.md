@@ -28,9 +28,9 @@ https://github.com/mihaelamj/uicolor-pantone
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+iOS 8+, XCode 7+
 
-UIKit
-Included via pod dependency:
+(Included via pod dependency):
 * ChameleonFramework
 * ColorUtils
 * UIColor-Crayola 
