@@ -12,13 +12,12 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		929B4B87CC6E1483FDCDDA40 /* Pods_JHColorPickerController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE48945FE45108746A2D1540 /* Pods_JHColorPickerController_Example.framework */; };
+		777EB9568BC78496596635AB /* Pods_JHColorPickerController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0892FD4DA19DF4DEE10EA11B /* Pods_JHColorPickerController_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		101CAD59E0D89EF8DA41B359 /* Pods-JHColorPickerController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHColorPickerController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JHColorPickerController_Example/Pods-JHColorPickerController_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		478DC17C6032358DD3658A01 /* Pods-JHColorPickerController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHColorPickerController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JHColorPickerController_Tests/Pods-JHColorPickerController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5E61E86E01D73708E1AEBB6A /* Pods_JHColorPickerController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JHColorPickerController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0892FD4DA19DF4DEE10EA11B /* Pods_JHColorPickerController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JHColorPickerController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CEA6D221B8F340BA37C5CE2 /* Pods-JHColorPickerController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHColorPickerController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JHColorPickerController_Example/Pods-JHColorPickerController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* JHColorPickerController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHColorPickerController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -28,10 +27,8 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6F554356E860386C3769F0A2 /* JHColorPickerController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JHColorPickerController.podspec; path = ../JHColorPickerController.podspec; sourceTree = "<group>"; };
 		B3DCCC2838B34C7CC082B207 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		C827254F155C0F53CDF09E96 /* Pods-JHColorPickerController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHColorPickerController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JHColorPickerController_Tests/Pods-JHColorPickerController_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		CE48945FE45108746A2D1540 /* Pods_JHColorPickerController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JHColorPickerController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0677416471FBC0011515E6B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		D87203C06321590E5506FABD /* Pods-JHColorPickerController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHColorPickerController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JHColorPickerController_Example/Pods-JHColorPickerController_Example.release.xcconfig"; sourceTree = "<group>"; };
+		EB36778DC773002ED4B028EA /* Pods-JHColorPickerController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHColorPickerController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JHColorPickerController_Example/Pods-JHColorPickerController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				929B4B87CC6E1483FDCDDA40 /* Pods_JHColorPickerController_Example.framework in Frameworks */,
+				777EB9568BC78496596635AB /* Pods_JHColorPickerController_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +49,8 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for JHColorPickerController */,
 				607FACD11AFB9204008FA782 /* Products */,
-				BE90D6325E4FB4392C19F5EF /* Pods */,
-				646B649D18F23AF1CB9237F6 /* Frameworks */,
+				E4AFB50F18D0A9A716543B67 /* Pods */,
+				786802F9FE93402601F1AC0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,22 +94,19 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		646B649D18F23AF1CB9237F6 /* Frameworks */ = {
+		786802F9FE93402601F1AC0E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE48945FE45108746A2D1540 /* Pods_JHColorPickerController_Example.framework */,
-				5E61E86E01D73708E1AEBB6A /* Pods_JHColorPickerController_Tests.framework */,
+				0892FD4DA19DF4DEE10EA11B /* Pods_JHColorPickerController_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BE90D6325E4FB4392C19F5EF /* Pods */ = {
+		E4AFB50F18D0A9A716543B67 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				101CAD59E0D89EF8DA41B359 /* Pods-JHColorPickerController_Example.debug.xcconfig */,
-				D87203C06321590E5506FABD /* Pods-JHColorPickerController_Example.release.xcconfig */,
-				478DC17C6032358DD3658A01 /* Pods-JHColorPickerController_Tests.debug.xcconfig */,
-				C827254F155C0F53CDF09E96 /* Pods-JHColorPickerController_Tests.release.xcconfig */,
+				EB36778DC773002ED4B028EA /* Pods-JHColorPickerController_Example.debug.xcconfig */,
+				4CEA6D221B8F340BA37C5CE2 /* Pods-JHColorPickerController_Example.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -124,12 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "JHColorPickerController_Example" */;
 			buildPhases = (
-				1364226A40C54E2EA2F3A4C3 /* Check Pods Manifest.lock */,
+				2F21E665904797EB46494D72 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				960884161281F006BAA80FB8 /* Embed Pods Frameworks */,
-				719F1E06BFB9AD90E0D353C8 /* Copy Pods Resources */,
+				9DEC6BEBBE3B41B7768065E5 /* [CP] Embed Pods Frameworks */,
+				B4299CEB9417C82326E6D793 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -147,12 +141,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = JM7WWM3V8C;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -188,49 +182,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1364226A40C54E2EA2F3A4C3 /* Check Pods Manifest.lock */ = {
+		2F21E665904797EB46494D72 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		719F1E06BFB9AD90E0D353C8 /* Copy Pods Resources */ = {
+		9DEC6BEBBE3B41B7768065E5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JHColorPickerController_Example/Pods-JHColorPickerController_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		960884161281F006BAA80FB8 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JHColorPickerController_Example/Pods-JHColorPickerController_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4299CEB9417C82326E6D793 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JHColorPickerController_Example/Pods-JHColorPickerController_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -280,8 +274,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -325,8 +321,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -345,16 +343,19 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 101CAD59E0D89EF8DA41B359 /* Pods-JHColorPickerController_Example.debug.xcconfig */;
+			baseConfigurationReference = EB36778DC773002ED4B028EA /* Pods-JHColorPickerController_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JHColorPickerController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -362,15 +363,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D87203C06321590E5506FABD /* Pods-JHColorPickerController_Example.release.xcconfig */;
+			baseConfigurationReference = 4CEA6D221B8F340BA37C5CE2 /* Pods-JHColorPickerController_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JHColorPickerController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -378,6 +382,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
