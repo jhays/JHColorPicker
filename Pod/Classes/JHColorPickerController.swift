@@ -139,7 +139,7 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
         
         //this is unfortunate, but any attempts to implement InfColorPickerDelegate have resulted in failure to compile. 
         //must be something to do with communicating between ObjC and Swift... this notification will have to do for now.
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "colorPickerDidChangeColor:", name: "CUSTOM_COLOR_DID_CHANGE", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(JHColorPickerController.colorPickerDidChangeColor(_:)), name: "CUSTOM_COLOR_DID_CHANGE", object: nil)
     }
     
     deinit {
@@ -171,8 +171,8 @@ public class JHColorPickerController: UIViewController, UICollectionViewDataSour
     }
     
     func loadNavButtons() {
-        let leftCancelBtn = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelBtnPressed:")
-        let rightSaveBtn = UIBarButtonItem(title: "Save", style: UIBarButtonItemStyle.Plain, target: self, action: "saveBtnPressed:")
+        let leftCancelBtn = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(JHColorPickerController.cancelBtnPressed(_:)))
+        let rightSaveBtn = UIBarButtonItem(title: "Save", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(JHColorPickerController.saveBtnPressed(_:)))
         self.navigationItem.leftBarButtonItem = leftCancelBtn
         self.navigationItem.rightBarButtonItem = rightSaveBtn
     }

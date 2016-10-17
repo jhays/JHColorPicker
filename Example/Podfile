@@ -1,7 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'JHColorPickerController_Example', :exclusive => true do
+target 'JHColorPickerController_Example' do
   pod "JHColorPicker", :path => "../"
 end
 
